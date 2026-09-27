@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Git History — Nadia & Partners</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container"><h1 class="brand">Nadia & Partners</h1><nav><a href="index.html">Home</a><a href="contact.html">Contact</a></nav></div></header>
+  <main class="container">
+    <h2>Git History</h2>
+    <p>This page will display a simple textual git history when `git-history.txt` is generated in the site root.</p>
+    <pre id="gitlog">No history available. Run the included script to generate it.</pre>
+    <p>See README for instructions to generate and view a visual git log.</p>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Nadia &amp; Partners</p></div></footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    fetch('git-history.txt').then(r=>{if(!r.ok)throw 0;return r.text()}).then(t=>document.getElementById('gitlog').textContent=t).catch(()=>{});
+  </script>
+</body>
+</html>
