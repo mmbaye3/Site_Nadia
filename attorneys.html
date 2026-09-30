@@ -1,24 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Attorneys — Nadia BENGELOUN</title>
+  <title>Votre avocate — Nadia Bengeloun</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="contact-bar"><div class="container"><a href="mailto:contact@example.com">Email: contact@example.com</a><a href="tel:+15555555555">Phone: (555) 555-5555</a></div></div>
-  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header>
+  <div class="contact-bar"><div class="container"><a href="mailto:contact@example.com">Courriel : contact@example.com</a><a href="tel:+15555555555">Téléphone : (555) 555-5555</a></div></div>
+  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><div class="site-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav id="primary-navigation"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="contact.html">Contact</a><a href="honoraires.html">Honoraires</a></nav></div></div></header>
   <main class="container">
-    <h2>Our Attorneys</h2>
+    <h2>Votre avocate</h2>
     <section class="people">
       <article>
-        <h3>Nadia Smith, Esq.</h3>
-        <p>Founder — Family law specialist with 15+ years' experience.</p>
+        <h3>Nadia Smith, avocate</h3>
+        <p>Fondatrice — Spécialisée en droit de la famille, avec plus de 15 ans d’expérience.</p>
       </article>
     </section>
   </main>
-  <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Nadia &amp; Partners</p></div></footer>
+  <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Nadia Bengeloun — Droit de la famille</p></div></footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.querySelectorAll(".menu-toggle").forEach((button) => {
+      const navigation = document.getElementById(button.getAttribute("aria-controls"));
+      button.addEventListener("click", () => {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          button.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

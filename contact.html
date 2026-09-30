@@ -1,25 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Nadia & Partners</title>
+  <title>Contact — Nadia Bengeloun, avocate en droit de la famille</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="contact-bar"><div class="container"><a href="mailto:contact@example.com">Email: contact@example.com</a><a href="tel:+15555555555">Phone: (555) 555-5555</a></div></div>
-  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav></div></header>
+  <div class="contact-bar"><div class="container"><a href="mailto:contact@example.com">Courriel : contact@example.com</a><a href="tel:+15555555555">Téléphone : (555) 555-5555</a></div></div>
+  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><div class="site-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav id="primary-navigation"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="contact.html">Contact</a><a href="honoraires.html">Honoraires</a></nav></div></div></header>
   <main class="container">
     <h2>Contact</h2>
-    <p>To contact us, fill the form below or call (555) 555-5555.</p>
+    <p>Pour nous contacter, remplissez le formulaire ci-dessous ou appelez-nous au (555) 555-5555.</p>
+    <p><strong>Le premier rendez-vous est gratuit.</strong></p>
+    <p>Il permet d’échanger sur votre situation, d’identifier les principales problématiques juridiques et de déterminer les modalités d’accompagnement.</p>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <label>Name<br><input type="text" name="name" required></label>
-      <label>Email<br><input type="email" name="email" required></label>
+      <label>Nom<br><input type="text" name="name" required></label>
+      <label>Courriel<br><input type="email" name="email" required></label>
       <label>Message<br><textarea name="message" rows="6" required></textarea></label>
-      <button type="submit">Send</button>
+      <button type="submit">Envoyer</button>
     </form>
   </main>
-  <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Nadia &amp; Partners</p></div></footer>
+  <footer class="site-footer"><div class="container"><p>&copy; <span id="year"></span> Nadia Bengeloun — Droit de la famille</p></div></footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.querySelectorAll(".menu-toggle").forEach((button) => {
+      const navigation = document.getElementById(button.getAttribute("aria-controls"));
+      button.addEventListener("click", () => {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          button.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

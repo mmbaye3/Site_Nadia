@@ -1,57 +1,90 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nadia BENGELOUN — Family Law</title>
-  <meta name="description" content="Family law practice offering divorce, custody, mediation and support services." />
+  <title>Nadia Bengeloun — Avocate en droit de la famille</title>
+  <meta name="description" content="Avocate en droit de la famille : divorce, autorité parentale, filiation, adoption et protection des personnes." />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.ico">
 </head>
-<body>
+<body class="home-page">
   <div class="contact-bar">
-    <div class="container"><a href="mailto:contact@example.com">Email: contact@example.com</a><a href="tel:+15555555555">Phone: (555) 555-5555</a></div>
+    <div class="container"><a href="mailto:contact@example.com">Courriel : contact@example.com</a><a href="tel:+15555555555">Téléphone : (555) 555-5555</a></div>
   </div>
   <header class="site-header">
     <div class="container">
       <h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <div class="site-menu">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <nav id="primary-navigation">
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="contact.html">Contact</a>
+          <a href="honoraires.html">Honoraires</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h2>Compassionate family law representation</h2>
-      <p>Experienced counsel for divorce, custody, adoption, and mediation with clear guidance and trusted advocacy.</p>
-      <p><a class="cta" href="contact.html">Request a Consultation</a></p>
+      <h2>Avocate en droit de la famille</h2>
+      <p>Écouter, conseiller et rechercher des solutions adaptées à chaque situation familiale.</p>
+      <p><a class="cta" href="contact.html">Demander une consultation</a></p>
+      <p>Le premier rendez-vous est gratuit.</p>
     </section>
 
     <section class="cards">
       <article>
-        <h3>Divorce &amp; Separation</h3>
-        <p>Practical counsel to protect your rights and help you move forward.</p>
+        <h3>Divorce &amp; séparation</h3>
+        <p>Divorce par consentement mutuel ou divorce judiciaire, séparation des époux et règlement des conséquences personnelles et patrimoniales.</p>
       </article>
       <article>
-        <h3>Child Custody &amp; Support</h3>
-        <p>Child-centered strategies for custody, parenting plans, and support matters.</p>
+        <h3>Autorité parentale &amp; Résidence des enfants</h3>
+        <p>Accompagnement dans les questions relatives à l’exercice de l’autorité parentale, à la résidence des enfants et au droit de visite et d’hébergement.</p>
       </article>
       <article>
-        <h3>Mediation &amp; Collaborative Law</h3>
-        <p>Alternative dispute resolution to reduce cost, time, and stress.</p>
+        <h3>Pension alimentaire &amp; contribution à l’entretien des enfants</h3>
+        <p>Détermination, fixation ou révision de la contribution à l’entretien et à l’éducation des enfants.</p>
+      </article>
+      <article>
+        <h3>Filiation</h3>
+        <p>Accompagnement dans les procédures relatives à l’établissement ou à la contestation de la filiation.</p>
+      </article>
+      <article>
+        <h3>Protection des personnes</h3>
+        <p>Accompagnement dans les situations de violences intrafamiliales et dans les procédures visant à assurer la protection des personnes concernées.</p>
+      </article>
+      <article>
+        <h3>Adoption</h3>
+        <p>Conseil et accompagnement dans les démarches et procédures relatives à l’adoption.</p>
       </article>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Nadia &amp; Partners — Family Law</p>
+      <p>&copy; <span id="year"></span> Nadia Bengeloun — Droit de la famille</p>
     </div>
   </footer>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.querySelectorAll(".menu-toggle").forEach((button) => {
+      const navigation = document.getElementById(button.getAttribute("aria-controls"));
+      button.addEventListener("click", () => {
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        navigation.classList.toggle("is-open", !isExpanded);
+      });
+      navigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          button.setAttribute("aria-expanded", "false");
+          navigation.classList.remove("is-open");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
