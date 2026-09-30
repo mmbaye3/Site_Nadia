@@ -23,16 +23,18 @@ nav a:hover,nav a:focus-visible{color:var(--accent);text-decoration:underline;te
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
 .cards article{border:1px solid var(--line);padding:1rem;border-radius:8px;background:#fcfaf6}
 @media (min-width:960px){.home-page .cards article:nth-child(5){grid-column:2}.home-page .cards article:nth-child(6){grid-column:3}}
-.home-page .cards article{animation:home-card-arrive .55s ease both;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
-.home-page .cards article:nth-child(2){animation-delay:.2s}
-.home-page .cards article:nth-child(3){animation-delay:.4s}
-.home-page .cards article:nth-child(4){animation-delay:.6s}
-.home-page .cards article:nth-child(5){animation-delay:.8s}
-.home-page .cards article:nth-child(6){animation-delay:1s}
+.home-page .skill-card{min-height:14rem;padding:0;border:0;background:transparent;perspective:1000px}
+.home-page .skill-card-toggle{display:block;width:100%;min-height:14rem;padding:0;border:0;border-radius:8px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.home-page .skill-card-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.home-page .skill-card-inner{position:relative;display:block;min-height:14rem;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.home-page .skill-card.is-flipped .skill-card-inner{transform:rotateY(180deg)}
+@media (hover:hover) and (pointer:fine){.home-page .skill-card:hover .skill-card-inner{transform:rotateY(180deg)}}
+.home-page .skill-card-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:1rem;border:1px solid var(--line);border-radius:8px;background:#fcfaf6;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.home-page .skill-card-front{color:var(--brand);font-size:1.15rem;font-weight:700}
+.home-page .skill-card-back{transform:rotateY(180deg);line-height:1.5;overflow-y:auto}
 @keyframes home-card-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes home-card-arrive-from-left{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:translateX(0)}}
-@media (max-width:600px){.home-page .cards article{animation-name:home-card-arrive-from-left}}
-@media (hover:hover) and (prefers-reduced-motion:no-preference){.home-page .cards article:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 20px rgba(53,41,31,.12)}}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){.home-page .skill-card:hover .skill-card-face{border-color:var(--accent);box-shadow:0 8px 20px rgba(53,41,31,.12)}}
 .honoraires-page main>p,.honoraires-page main>h3,.honoraires-page .cards article{animation:home-card-arrive .55s ease both}
 .honoraires-page main>p:nth-of-type(2){animation-delay:.2s}
 .honoraires-page main>h3{animation-delay:.4s}
@@ -41,9 +43,27 @@ nav a:hover,nav a:focus-visible{color:var(--accent);text-decoration:underline;te
 .honoraires-page main>p:nth-of-type(3){animation-delay:1s}
 .honoraires-page main>p:nth-of-type(4){animation-delay:1.2s}
 @media (max-width:600px){.honoraires-page main>p,.honoraires-page main>h3,.honoraires-page .cards article{animation-name:home-card-arrive-from-left}}
-@media (prefers-reduced-motion:reduce){.home-page .cards article,.honoraires-page main>p,.honoraires-page main>h3,.honoraires-page .cards article{animation:none;transition:none}}
+@media (prefers-reduced-motion:reduce){.home-page .skill-card-inner,.honoraires-page main>p,.honoraires-page main>h3,.honoraires-page .cards article{animation:none;transition:none}}
 form label{display:block;margin:0.5rem 0}
 input,textarea{width:100%;padding:.5rem;border:1px solid var(--line);border-radius:6px;background:#fcfaf6;color:var(--ink)}
 button{background:var(--brand);color:#fff;padding:.6rem 1rem;border:0;border-radius:6px}
-.site-footer{border-top:1px solid var(--line);margin-top:3rem;padding:1rem 0;color:var(--muted)}
+.form-status{color:#8a2f23}
+.message-dialog{width:min(28rem,calc(100% - 2rem));padding:1.5rem;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.message-dialog::backdrop{background:rgba(53,41,31,.55)}
+.message-dialog h2{margin-top:0;color:var(--brand)}
+.message-dialog form{margin-top:1.25rem;text-align:right}
+.site-footer{border-top:1px solid #5b4632;margin-top:3rem;padding:1rem 0;color:var(--paper);background:#35291f}
+.site-footer .container{max-width:1200px}
+.footer-layout{display:grid;grid-template-columns:minmax(0,1fr) 14rem;gap:2rem;align-items:start}
+.footer-main{min-width:0}
+.footer-copyright{margin:1rem 0 0}
+.footer-location{display:grid;gap:.5rem;margin-top:.75rem;color:var(--paper)}
+.footer-location address{font-style:normal}
+.footer-map{display:block;width:min(100%,24rem);height:12rem;border:1px solid var(--line);border-radius:4px}
+.footer-social h2{margin:0 0 .75rem;color:var(--paper);font-size:1.1rem}
+.linkedin-link{display:inline-flex;width:2.75rem;height:2.75rem;align-items:center;justify-content:center;border-radius:5px}
+.linkedin-link img{display:block;width:100%;height:100%}
+.linkedin-link:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+.linkedin-link:hover{filter:brightness(1.15)}
+@media (max-width:600px){.footer-layout{grid-template-columns:1fr;gap:1.25rem}}
 @media (max-width:600px){.site-header .container{flex-direction:row;align-items:center}.menu-toggle{display:inline-flex;align-items:center}.site-menu{position:relative}.site-menu nav{position:absolute;z-index:2;top:calc(100% + .5rem);right:0;display:none;flex-direction:column;gap:0;min-width:10rem;padding:.35rem 0;background:var(--paper);border:1px solid var(--line);box-shadow:0 4px 12px #35291f20}.site-menu nav.is-open{display:flex}.site-menu nav a{padding:.65rem .85rem}.site-menu nav a:hover,.site-menu nav a:focus-visible{background:#e5d7c0}}
