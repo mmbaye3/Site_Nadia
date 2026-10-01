@@ -4,10 +4,11 @@ body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;color:var(--ink);b
 body.home-page{background-image:linear-gradient(rgba(248,244,236,.55),rgba(248,244,236,.55)),url("../Logo/Home_Image.png");background-size:cover;background-position:center;background-attachment:fixed}
 .container{max-width:960px;margin:0 auto;padding:1rem}
 .contact-bar{background:#35291f;color:var(--paper)}
-.contact-bar .container{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:.35rem 1.25rem;padding-top:.55rem;padding-bottom:.55rem}
-.contact-bar a{color:inherit;text-decoration:none;font-size:.9rem}
+.contact-bar .container{max-width:none;display:flex;justify-content:flex-end;flex-wrap:wrap;gap:.35rem 1.25rem;padding:.55rem 1.5rem}
+.contact-bar a{display:inline-flex;align-items:center;gap:.4rem;color:inherit;text-decoration:none;font-size:.9rem}
+.contact-bar a span{font-size:1rem;line-height:1}
 .contact-bar a:hover,.contact-bar a:focus-visible{text-decoration:underline;text-underline-offset:.2em}
-.site-header{background:var(--paper);border-bottom:1px solid var(--line)}
+.site-header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
 .site-header .container{display:flex;align-items:center;justify-content:space-between}
 .brand{margin:0;flex:0 0 auto}
 .brand a{display:block;width:clamp(10rem,24vw,15rem);aspect-ratio:2.46;overflow:hidden;background:var(--paper)}
@@ -19,19 +20,21 @@ nav a{color:var(--brand);text-decoration:none}
 nav a:hover,nav a:focus-visible{color:var(--accent);text-decoration:underline;text-underline-offset:.25em}
 .hero{padding:3rem 0;text-align:center}
 .hero h2{color:var(--brand);margin:0 0 .5rem}
+.home-page .hero > p:first-of-type{color:#241b14;font-size:1.2rem;line-height:1.5}
+.home-page .hero > p:last-of-type{color:#fff;font-size:1.2rem;font-weight:700;text-shadow:0 1px 3px rgba(53,41,31,.9)}
 .cta{display:inline-block;background:var(--accent);color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
 .cards article{border:1px solid var(--line);padding:1rem;border-radius:8px;background:#fcfaf6}
 @media (min-width:960px){.home-page .cards article:nth-child(5){grid-column:2}.home-page .cards article:nth-child(6){grid-column:3}}
-.home-page .skill-card{min-height:14rem;padding:0;border:0;background:transparent;perspective:1000px}
-.home-page .skill-card-toggle{display:block;width:100%;min-height:14rem;padding:0;border:0;border-radius:8px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
+.home-page .skill-card{min-height:16rem;padding:0;border:0;background:transparent;perspective:1000px}
+.home-page .skill-card-toggle{display:block;width:100%;min-height:16rem;padding:0;border:0;border-radius:8px;background:transparent;color:var(--ink);text-align:left;cursor:pointer}
 .home-page .skill-card-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.home-page .skill-card-inner{position:relative;display:block;min-height:14rem;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.home-page .skill-card-inner{position:relative;display:block;min-height:16rem;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.7,.2,1)}
 .home-page .skill-card.is-flipped .skill-card-inner{transform:rotateY(180deg)}
 @media (hover:hover) and (pointer:fine){.home-page .skill-card:hover .skill-card-inner{transform:rotateY(180deg)}}
 .home-page .skill-card-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:1rem;border:1px solid var(--line);border-radius:8px;background:#fcfaf6;text-align:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .home-page .skill-card-front{color:var(--brand);font-size:1.15rem;font-weight:700}
-.home-page .skill-card-back{transform:rotateY(180deg);line-height:1.5;overflow-y:auto}
+.home-page .skill-card-back{transform:rotateY(180deg);color:#241b14;font-size:1.05rem;line-height:1.5}
 @keyframes home-card-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @keyframes home-card-arrive-from-left{from{opacity:0;transform:translateX(-22px)}to{opacity:1;transform:translateX(0)}}
 @media (hover:hover) and (prefers-reduced-motion:no-preference){.home-page .skill-card:hover .skill-card-face{border-color:var(--accent);box-shadow:0 8px 20px rgba(53,41,31,.12)}}
