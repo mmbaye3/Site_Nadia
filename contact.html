@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Contact — Nadia Bengeloun, avocate en droit de la famille</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/png" href="Logo/Onglet.png">
@@ -16,9 +18,10 @@
     <p><strong>Le premier rendez-vous est gratuit.</strong></p>
     <p>Il permet d’échanger sur votre situation, d’identifier les principales problématiques juridiques et de déterminer les modalités d’accompagnement.</p>
     <form id="contact-form" action="https://formspree.io/f/xkjrolwq" method="POST" aria-describedby="form-status">
-      <label>Nom<br><input type="text" name="name" required></label>
-      <label>Courriel<br><input type="email" name="email" required></label>
-      <label>Message<br><textarea name="message" rows="6" required></textarea></label>
+      <label>Nom<br><input type="text" name="name" autocomplete="name" maxlength="100" required></label>
+      <label>Courriel<br><input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+      <label>Message<br><textarea name="message" rows="6" maxlength="5000" required></textarea></label>
+      <input type="text" name="_gotcha" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit">Envoyer</button>
     </form>
     <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
@@ -28,56 +31,8 @@
     <p>Merci pour votre message. Nous vous répondrons dans les meilleurs délais.</p>
     <form method="dialog"><button type="submit">Fermer</button></form>
   </dialog>
-  <footer class="site-footer"><div class="container"><div class="footer-layout"><div class="footer-main"><div class="footer-location"><strong>Adresse du cabinet :</strong><address>106, avenue Mozart, 75016 Paris</address><iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div><section class="footer-social" aria-labelledby="footer-social-title"><h2 id="footer-social-title">Réseaux sociaux</h2><a class="linkedin-link" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun"><img src="Logo/linkedin-mark.svg" alt="LinkedIn"></a></section></div><p class="footer-copyright">&copy; <span id="year"></span> Nadia Bengeloun</p></div></footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-  <script>
-    const contactForm = document.getElementById("contact-form");
-    const formStatus = document.getElementById("form-status");
-    const messageDialog = document.getElementById("message-dialog");
-    const submitButton = contactForm.querySelector("button[type='submit']");
-
-    contactForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      submitButton.disabled = true;
-      formStatus.hidden = false;
-      formStatus.textContent = "Envoi en cours…";
-
-      try {
-        const response = await fetch(contactForm.action, {
-          method: "POST",
-          body: new FormData(contactForm),
-          headers: { Accept: "application/json" }
-        });
-
-        if (!response.ok) {
-          throw new Error("L’envoi a échoué.");
-        }
-
-        contactForm.reset();
-        formStatus.hidden = true;
-        messageDialog.showModal();
-      } catch {
-        formStatus.textContent = "Votre message n’a pas pu être envoyé. Vérifiez votre connexion et réessayez.";
-      } finally {
-        submitButton.disabled = false;
-      }
-    });
-  </script>
-  <script>
-    document.querySelectorAll(".menu-toggle").forEach((button) => {
-      const navigation = document.getElementById(button.getAttribute("aria-controls"));
-      button.addEventListener("click", () => {
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        navigation.classList.toggle("is-open", !isExpanded);
-      });
-      navigation.addEventListener("click", (event) => {
-        if (event.target.closest("a")) {
-          button.setAttribute("aria-expanded", "false");
-          navigation.classList.remove("is-open");
-        }
-      });
-    });
-  </script>
+  <footer class="site-footer"><div class="container"><div class="footer-layout"><div class="footer-main"><div class="footer-location"><strong>Adresse du cabinet :</strong><address>106, avenue Mozart, 75016 Paris</address><iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div></div><section class="footer-social" aria-labelledby="footer-social-title"><h2 id="footer-social-title">Réseaux sociaux</h2><a class="linkedin-link" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun"><img src="Logo/linkedin-mark.svg" alt="LinkedIn"></a></section></div><p class="footer-copyright">&copy; <span id="year"></span> Nadia Bengeloun</p></div></footer>
+  <script src="js/site.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </body>
 </html>

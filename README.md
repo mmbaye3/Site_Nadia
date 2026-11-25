@@ -17,19 +17,9 @@ git remote add origin https://github.com/<your-username>/<repo>.git
 git push -u origin main
 ```
 
-Enable Git visualization
-
-- After you have commits, run the script to generate `git-history.txt`:
-
-Windows:
-
-```bat
-scripts\generate_git_history.bat
-```
-
-This produces `git-history.txt` in the site root. When you serve the site (GitHub Pages, Netlify), open `history.html` to view the textual git history.
-
 Deployment
+
+- GitHub Pages: enable "Enforce HTTPS" in Settings > Pages.
 
 - GitHub Pages: push to the `main` branch (or `gh-pages`) and enable Pages in repo settings.
 - Netlify: drag-drop the folder or connect the GitHub repo.

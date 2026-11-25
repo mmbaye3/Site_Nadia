@@ -70,3 +70,16 @@ button{background:var(--brand);color:#fff;padding:.6rem 1rem;border:0;border-rad
 .linkedin-link:hover{filter:brightness(1.15)}
 @media (max-width:600px){.footer-layout{grid-template-columns:1fr;gap:1.25rem}}
 @media (max-width:600px){.site-header .container{flex-direction:row;align-items:center}.menu-toggle{display:inline-flex;align-items:center}.site-menu{position:relative}.site-menu nav{position:absolute;z-index:2;top:calc(100% + .5rem);right:0;display:none;flex-direction:column;gap:0;min-width:10rem;padding:.35rem 0;background:var(--paper);border:1px solid var(--line);box-shadow:0 4px 12px #35291f20}.site-menu nav.is-open{display:flex}.site-menu nav a{padding:.65rem .85rem}.site-menu nav a:hover,.site-menu nav a:focus-visible{background:#e5d7c0}}
+
+/* Champ anti-spam (honeypot) invisible pour les visiteurs */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}

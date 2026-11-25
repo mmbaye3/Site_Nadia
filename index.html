@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Nadia Bengeloun — Avocate en droit de la famille</title>
   <meta name="description" content="Avocate en droit de la famille : divorce, autorité parentale, filiation, adoption et protection des personnes." />
   <link rel="stylesheet" href="css/styles.css">
@@ -94,7 +96,7 @@
           <div class="footer-location">
             <strong>Adresse du cabinet :</strong>
             <address>106, avenue Mozart, 75016 Paris</address>
-            <iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
           </div>
         </div>
         <section class="footer-social" aria-labelledby="footer-social-title">
@@ -108,50 +110,7 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-  <script>
-    const cardHoverMedia = window.matchMedia("(hover: hover) and (pointer: fine)");
-
-    document.querySelectorAll(".skill-card-toggle").forEach((button) => {
-      const card = button.closest(".skill-card");
-      const back = document.getElementById(button.getAttribute("aria-controls"));
-
-      card.addEventListener("pointerenter", () => {
-        if (!cardHoverMedia.matches) return;
-        button.setAttribute("aria-expanded", "true");
-        back.setAttribute("aria-hidden", "false");
-      });
-
-      card.addEventListener("pointerleave", () => {
-        if (!cardHoverMedia.matches || card.classList.contains("is-flipped")) return;
-        button.setAttribute("aria-expanded", "false");
-        back.setAttribute("aria-hidden", "true");
-      });
-
-      button.addEventListener("click", (event) => {
-        if (cardHoverMedia.matches && event.detail > 0) return;
-        const isFlipped = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isFlipped));
-        back.setAttribute("aria-hidden", String(isFlipped));
-        card.classList.toggle("is-flipped", !isFlipped);
-      });
-    });
-  </script>
-  <script>
-    document.querySelectorAll(".menu-toggle").forEach((button) => {
-      const navigation = document.getElementById(button.getAttribute("aria-controls"));
-      button.addEventListener("click", () => {
-        const isExpanded = button.getAttribute("aria-expanded") === "true";
-        button.setAttribute("aria-expanded", String(!isExpanded));
-        navigation.classList.toggle("is-open", !isExpanded);
-      });
-      navigation.addEventListener("click", (event) => {
-        if (event.target.closest("a")) {
-          button.setAttribute("aria-expanded", "false");
-          navigation.classList.remove("is-open");
-        }
-      });
-    });
-  </script>
+  <script src="js/site.js" defer></script>
+  <script src="js/cards.js" defer></script>
 </body>
 </html>
