@@ -78,3 +78,61 @@ if (revealEls.length && "IntersectionObserver" in window && !reduceMotion) {
     if (!el.classList.contains("is-visible")) observer.observe(el);
   });
 }
+
+// ---------- Animations complémentaires ----------
+if (!reduceMotion) {
+  // Barre de progression de lecture
+  const progress = document.createElement("div");
+  progress.className = "scroll-progress";
+  progress.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progress);
+
+  // Léger effet de parallaxe sur la photo d'accueil
+  const heroImg = document.querySelector(".hero-media img");
+
+  let frame = null;
+  const animateOnScroll = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+    if (heroImg && window.scrollY < window.innerHeight * 1.2) {
+      heroImg.style.setProperty("--parallax", `${Math.round(window.scrollY * 0.25)}px`);
+    }
+    frame = null;
+  };
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!frame) frame = requestAnimationFrame(animateOnScroll);
+    },
+    { passive: true }
+  );
+  animateOnScroll();
+
+  // Chiffres clés qui défilent jusqu'à leur valeur
+  const counters = document.querySelectorAll("[data-count]");
+  if (counters.length && "IntersectionObserver" in window) {
+    const runCounter = (el) => {
+      const target = Number(el.dataset.count);
+      const duration = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * eased);
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          runCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.6 }
+    );
+    counters.forEach((el) => counterObserver.observe(el));
+  }
+}
