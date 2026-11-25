@@ -3,22 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>À propos — Nadia Bengeloun, avocate en droit de la famille</title>
+  <title>Le cabinet — Nadia Bengeloun, avocate en droit de la famille</title>
+  <meta name="description" content="Nadia Bengeloun accompagne les familles avec écoute et pragmatisme afin de rechercher des solutions adaptées à chaque situation. Cabinet à Paris 16e." />
+  <link rel="canonical" href="https://nb-avocate.fr/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Le cabinet — Nadia Bengeloun, avocate en droit de la famille" />
+  <meta property="og:description" content="Nadia Bengeloun accompagne les familles avec écoute et pragmatisme afin de rechercher des solutions adaptées à chaque situation. Cabinet à Paris 16e." />
+  <meta property="og:image" content="https://nb-avocate.fr/Logo/home.jpg" />
+  <meta name="theme-color" content="#f8f4ec" />
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="Logo/Onglet.png">
+  <link rel="icon" type="image/png" href="Logo/favicon.png">
 </head>
 <body>
-  <div class="contact-bar"><div class="container"><a href="mailto:nadia.bengeloun@nb-avocate.fr"><span aria-hidden="true">✉</span>Courriel : nadia.bengeloun@nb-avocate.fr</a><a href="tel:+33177351440"><span aria-hidden="true">☎</span>Téléphone : 01 77 35 14 40</a></div></div>
-  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><div class="site-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav id="primary-navigation"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="contact.html">Contact</a><a href="honoraires.html">Honoraires</a></nav></div></div></header>
-  <main class="container">
-    <h2>À propos du cabinet</h2>
-    <p>Nadia Bengeloun est avocate en droit de la famille. Elle accompagne les familles avec écoute et pragmatisme afin de rechercher des solutions adaptées à chaque situation.</p>
-    <h3>Notre approche</h3>
-    <p>Nous privilégions une communication claire, l’information de nos clients et, lorsque cela est possible, la résolution efficace des différends.</p>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Nadia Bengeloun, avocate — accueil">
+        <img src="Logo/nb-mark.png" alt="" width="200" height="174">
+        <span class="brand-text"><span class="brand-name">Nadia Bengeloun</span><span class="brand-role">Avocate · Droit de la famille</span></span>
+      </a>
+      <nav id="primary-navigation" class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a><a href="about.html" aria-current="page">Le cabinet</a><a href="practice.html">Expertises</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Prendre rendez-vous</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+33177351440" aria-label="Appeler le cabinet au 01 77 35 14 40"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>01 77 35 14 40</span></a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Prendre rendez-vous</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="wrap">
+        <ol class="breadcrumb" aria-label="Fil d’Ariane"><li><a href="index.html">Accueil</a></li><li aria-current="page">Le cabinet</li></ol>
+        <span class="eyebrow">Le cabinet</span>
+        <h1>Une avocate à l’écoute des <em>familles</em></h1>
+        <p class="lead">Nadia Bengeloun est avocate en droit de la famille. Elle accompagne les familles avec écoute et pragmatisme afin de rechercher des solutions adaptées à chaque situation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap two-col">
+        <div class="prose reveal">
+          <h2>Notre approche</h2>
+          <p class="lead">Nous privilégions une communication claire, l’information de nos clients et, lorsque cela est possible, la résolution efficace des différends.</p>
+          <p>Les questions familiales touchent à ce que chacun a de plus personnel. Chaque dossier est donc abordé avec attention, en tenant compte de votre histoire, de vos priorités et, le cas échéant, de l’intérêt de vos enfants.</p>
+          <h2>Nos engagements</h2>
+          <ul class="values values--light">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><div><strong>Écoute</strong><span>Comprendre votre situation dans sa globalité avant de vous conseiller.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2z"/></svg><div><strong>Pragmatisme</strong><span>Rechercher la solution la plus adaptée, amiable lorsque cela est possible.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><div><strong>Clarté</strong><span>Vous informer à chaque étape, dans un langage compréhensible.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><div><strong>Transparence</strong><span>Des honoraires définis ensemble dans une convention d’honoraires.</span></div></li>
+          </ul>
+        </div>
+        <aside class="aside-card reveal">
+          <img src="Logo/nb-mark-light.png" alt="" width="200" height="174" loading="lazy">
+          <h3>Premier rendez-vous gratuit</h3>
+          <p>Il permet d’échanger sur votre situation, d’identifier les principales problématiques juridiques et de déterminer les modalités d’accompagnement.</p>
+          <div class="contact-lines">
+            <a href="tel:+33177351440">01 77 35 14 40</a>
+            <a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a>
+            <span>106, avenue Mozart, 75016 Paris</span>
+          </div>
+          <a class="btn btn--light" href="contact.html">Prendre rendez-vous <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Votre accompagnement</span>
+          <h2>Comment se déroule l’accompagnement ?</h2>
+        </div>
+        <ol class="steps reveal-group">
+          <li class="step reveal"><h3>Premier échange</h3><p>Un rendez-vous gratuit pour échanger sur votre situation, en toute confidentialité.</p></li>
+          <li class="step reveal"><h3>Analyse</h3><p>Identification des principales problématiques juridiques et des options qui s’offrent à vous.</p></li>
+          <li class="step reveal"><h3>Stratégie</h3><p>Définition des modalités d’accompagnement et d’une convention d’honoraires claire.</p></li>
+          <li class="step reveal"><h3>Accompagnement</h3><p>Une information claire et un suivi attentif à chaque étape de votre dossier.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <span class="eyebrow">Premier rendez-vous gratuit</span>
+          <h2>Parlons de votre situation</h2>
+          <p>Chaque histoire familiale est unique. Prenez le temps d’en parler : le premier rendez-vous permet de faire le point, sans engagement.</p>
+          <div class="btn-row">
+            <a class="btn btn--light" href="contact.html">Prendre rendez-vous <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--outline-light" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>01 77 35 14 40</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-layout"><div class="footer-main"><div class="footer-location"><strong>Adresse du cabinet :</strong><address>106, avenue Mozart, 75016 Paris</address><iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div></div><section class="footer-social" aria-labelledby="footer-social-title"><h2 id="footer-social-title">Réseaux sociaux</h2><a class="linkedin-link" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun"><img src="Logo/linkedin-mark.svg" alt="LinkedIn"></a></section></div><p class="footer-copyright">&copy; <span id="year"></span> Nadia Bengeloun</p></div></footer>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo/logo-full-light.png" alt="Nadia Bengeloun" width="560" height="238" loading="lazy">
+          <p>Avocate en droit de la famille à Paris. Écoute, conseil et solutions adaptées à chaque situation familiale.</p>
+        </div>
+        <div>
+          <h2>Le cabinet</h2>
+          <address>106, avenue Mozart<br>75016 Paris</address>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul class="footer-links">
+            <li><a href="tel:+33177351440">01 77 35 14 40</a></li>
+            <li><a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a></li>
+          </ul>
+          <a class="social" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun (nouvel onglet)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.770-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></span>LinkedIn</a>
+        </div>
+        <div>
+          <h2>Navigation</h2>
+          <ul class="footer-links"><li><a href="index.html">Accueil</a></li><li><a href="about.html">Le cabinet</a></li><li><a href="practice.html">Expertises</a></li><li><a href="honoraires.html">Honoraires</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Nadia Bengeloun — Avocate en droit de la famille</span>
+        <span>Premier rendez-vous gratuit</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn--ghost" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Appeler</a>
+    <a class="btn btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg>Rendez-vous</a>
+  </div>
+
   <script src="js/site.js" defer></script>
 </body>
 </html>

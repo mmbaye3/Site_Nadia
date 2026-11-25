@@ -1,36 +1,24 @@
-# Nadia & Partners — Static Family Law Site
+# Cabinet Nadia Bengeloun — Avocate en droit de la famille
 
-Simple static site scaffold for a family law practice. Customize text, replace branding, and optionally deploy to GitHub Pages or Netlify.
+Site statique (HTML / CSS / JavaScript, sans dépendance) hébergé sur GitHub Pages — https://nb-avocate.fr
 
-Quick start
+## Structure
 
-1. Replace placeholder text (firm name, phone, attorney bios) in the HTML files.
-2. Update `contact.html` form action with your Formspree ID or another form endpoint.
+| Fichier | Contenu |
+| --- | --- |
+| `index.html` | Accueil : présentation, expertises, méthode, cabinet, honoraires, FAQ |
+| `about.html` | Le cabinet |
+| `practice.html` | Expertises (ancres `#divorce`, `#autorite-parentale`, `#pension-alimentaire`, `#filiation`, `#protection`, `#adoption`) |
+| `honoraires.html` | Honoraires |
+| `contact.html` | Coordonnées, carte et formulaire (Formspree) |
+| `css/styles.css` | Styles — couleurs dans les variables `:root` |
+| `js/site.js` | Menu mobile, en-tête, apparition au défilement |
+| `js/contact.js` | Envoi du formulaire |
+| `fonts/` | Cormorant Garamond et Manrope (licence SIL OFL), hébergées localement |
+| `Logo/` | Logo NB (versions transparentes claire et foncée), photo, favicon |
 
-Initialize git and push to GitHub
+`contact.html?domaine=divorce` pré-sélectionne le domaine dans le formulaire.
 
-```bash
-git init
-git add .
-git commit -m "Initial site scaffold"
-git remote add origin https://github.com/<your-username>/<repo>.git
-git push -u origin main
-```
+## Déploiement
 
-Deployment
-
-- GitHub Pages: enable "Enforce HTTPS" in Settings > Pages.
-
-- GitHub Pages: push to the `main` branch (or `gh-pages`) and enable Pages in repo settings.
-- Netlify: drag-drop the folder or connect the GitHub repo.
-
-Customization notes
-
-- Colors are in `css/styles.css` under `:root` variables. Replace with firm branding.
-- Add images to an `images/` folder and reference them in the pages.
-
-Next steps I can do for you
-
-- Initialize the git repo and create the first commit.
-- Connect to GitHub and enable GitHub Pages.
-- Add analytics, SEO meta tags, or a simple CMS (Netlify CMS).
+- GitHub Pages : pousser sur `main`, puis activer « Enforce HTTPS » dans Settings > Pages.

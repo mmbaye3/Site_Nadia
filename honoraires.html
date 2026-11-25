@@ -3,35 +3,161 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Honoraires — Nadia Bengeloun</title>
-  <meta name="description" content="Informations sur les honoraires et les modalités de facturation du cabinet." />
+  <title>Honoraires — Nadia Bengeloun, avocate en droit de la famille</title>
+  <meta name="description" content="Informations sur les honoraires et les modalités de facturation du cabinet : taux horaire de 150 € HT ou forfait, convention d’honoraires." />
+  <link rel="canonical" href="https://nb-avocate.fr/honoraires.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Honoraires — Nadia Bengeloun, avocate en droit de la famille" />
+  <meta property="og:description" content="Informations sur les honoraires et les modalités de facturation du cabinet : taux horaire de 150 € HT ou forfait, convention d’honoraires." />
+  <meta property="og:image" content="https://nb-avocate.fr/Logo/home.jpg" />
+  <meta name="theme-color" content="#f8f4ec" />
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="Logo/Onglet.png">
+  <link rel="icon" type="image/png" href="Logo/favicon.png">
 </head>
-<body class="honoraires-page">
-  <div class="contact-bar"><div class="container"><a href="mailto:nadia.bengeloun@nb-avocate.fr"><span aria-hidden="true">✉</span>Courriel : nadia.bengeloun@nb-avocate.fr</a><a href="tel:+33177351440"><span aria-hidden="true">☎</span>Téléphone : 01 77 35 14 40</a></div></div>
-  <header class="site-header"><div class="container"><h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1><div class="site-menu"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button><nav id="primary-navigation"><a href="index.html">Accueil</a><a href="about.html">À propos</a><a href="contact.html">Contact</a><a href="honoraires.html" aria-current="page">Honoraires</a></nav></div></div></header>
-  <main class="container">
-    <h2>Honoraires</h2>
-    <p>La transparence concernant les honoraires constitue un élément essentiel de la relation entre l’avocat et son client.</p>
-    <p>Les honoraires sont déterminés en fonction de la nature du dossier, de sa complexité et des diligences nécessaires à son traitement.</p>
-    <h3>Deux modes de facturation peuvent être proposés</h3>
-    <section class="cards">
-      <article>
-        <h3>Honoraires au temps passé</h3>
-        <p>Les diligences sont facturées au temps passé, sur la base d’un taux horaire de <strong>150 € HT</strong>.</p>
-      </article>
-      <article>
-        <h3>Honoraires forfaitaires</h3>
-        <p>Un honoraire forfaitaire peut également être proposé en fonction de la nature du dossier.</p>
-      </article>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Nadia Bengeloun, avocate — accueil">
+        <img src="Logo/nb-mark.png" alt="" width="200" height="174">
+        <span class="brand-text"><span class="brand-name">Nadia Bengeloun</span><span class="brand-role">Avocate · Droit de la famille</span></span>
+      </a>
+      <nav id="primary-navigation" class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a><a href="about.html">Le cabinet</a><a href="practice.html">Expertises</a><a href="honoraires.html" aria-current="page">Honoraires</a><a href="contact.html">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Prendre rendez-vous</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+33177351440" aria-label="Appeler le cabinet au 01 77 35 14 40"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>01 77 35 14 40</span></a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Prendre rendez-vous</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="page-hero">
+      <div class="wrap">
+        <ol class="breadcrumb" aria-label="Fil d’Ariane"><li><a href="index.html">Accueil</a></li><li aria-current="page">Honoraires</li></ol>
+        <span class="eyebrow">Honoraires</span>
+        <h1>Des honoraires <em>clairs</em> et transparents</h1>
+        <p class="lead">La transparence concernant les honoraires constitue un élément essentiel de la relation entre l’avocat et son client.</p>
+      </div>
     </section>
-    <p>Les frais annexes (huissiers, postulation, frais de débours et dépens) restent à la charge du client.</p>
-    <p>Les modalités de facturation sont définies en toute transparence avec le client et font l’objet d’une convention d’honoraires.</p>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Modes de facturation</span>
+          <h2>Deux modes de facturation peuvent être proposés</h2>
+          <p class="lead">Les honoraires sont déterminés en fonction de la nature du dossier, de sa complexité et des diligences nécessaires à son traitement.</p>
+        </div>
+        <div class="pricing reveal-group">
+          <article class="price-card price-card--featured reveal">
+            <span class="price-tag">Au temps passé</span>
+            <h3>Honoraires au temps passé</h3>
+            <p class="price"><b>150&nbsp;€</b><span>HT / heure</span></p>
+            <p>Les diligences sont facturées au temps passé, sur la base d’un taux horaire de 150&nbsp;€&nbsp;HT.</p>
+            <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Convention d’honoraires écrite</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Modalités définies en toute transparence</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Premier rendez-vous gratuit</li></ul>
+          </article>
+          <article class="price-card reveal">
+            <span class="price-tag">Forfait</span>
+            <h3>Honoraires forfaitaires</h3>
+            <p class="price"><b>Sur mesure</b></p>
+            <p>Un honoraire forfaitaire peut également être proposé en fonction de la nature du dossier.</p>
+            <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montant adapté à la nature du dossier</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Convention d’honoraires écrite</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Premier rendez-vous gratuit</li></ul>
+          </article>
+        </div>
+        <div class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><p><strong>Frais annexes.</strong> Les frais annexes (huissiers, postulation, frais de débours et dépens) restent à la charge du client.</p></div></div>
+        <div class="note reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg><div><p><strong>Convention d’honoraires.</strong> Les modalités de facturation sont définies en toute transparence avec le client et font l’objet d’une convention d’honoraires.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap faq-layout">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Vos questions, nos réponses</h2>
+        </div>
+        <div class="faq reveal">
+          <details open>
+            <summary>Le premier rendez-vous est-il payant ?</summary>
+            <div class="answer"><p>Non, le premier rendez-vous est gratuit. Il permet d’échanger sur votre situation, d’identifier les principales problématiques juridiques et de déterminer les modalités d’accompagnement.</p></div>
+          </details>
+          <details>
+            <summary>Comment sont fixés les honoraires ?</summary>
+            <div class="answer"><p>Les honoraires sont déterminés en fonction de la nature du dossier, de sa complexité et des diligences nécessaires. Ils sont facturés au temps passé (150&nbsp;€&nbsp;HT de l’heure) ou au forfait, et font l’objet d’une convention d’honoraires.</p></div>
+          </details>
+          <details>
+            <summary>Quels frais peuvent s’ajouter aux honoraires ?</summary>
+            <div class="answer"><p>Les frais annexes (huissiers, postulation, frais de débours et dépens) restent à la charge du client.</p></div>
+          </details>
+          <details>
+            <summary>Comment prendre rendez-vous ?</summary>
+            <div class="answer"><p>Vous pouvez remplir le <a href="contact.html">formulaire de contact</a>, appeler le cabinet au <a href="tel:+33177351440">01 77 35 14 40</a> ou écrire à <a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a>.</p></div>
+          </details>
+          <details>
+            <summary>Où se situe le cabinet ?</summary>
+            <div class="answer"><p>Le cabinet est situé au 106, avenue Mozart, 75016 Paris.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <span class="eyebrow">Premier rendez-vous gratuit</span>
+          <h2>Parlons de votre situation</h2>
+          <p>Chaque histoire familiale est unique. Prenez le temps d’en parler : le premier rendez-vous permet de faire le point, sans engagement.</p>
+          <div class="btn-row">
+            <a class="btn btn--light" href="contact.html">Prendre rendez-vous <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--outline-light" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>01 77 35 14 40</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container"><div class="footer-layout"><div class="footer-main"><div class="footer-location"><strong>Adresse du cabinet :</strong><address>106, avenue Mozart, 75016 Paris</address><iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe></div></div><section class="footer-social" aria-labelledby="footer-social-title"><h2 id="footer-social-title">Réseaux sociaux</h2><a class="linkedin-link" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun"><img src="Logo/linkedin-mark.svg" alt="LinkedIn"></a></section></div><p class="footer-copyright">&copy; <span id="year"></span> Nadia Bengeloun</p></div></footer>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo/logo-full-light.png" alt="Nadia Bengeloun" width="560" height="238" loading="lazy">
+          <p>Avocate en droit de la famille à Paris. Écoute, conseil et solutions adaptées à chaque situation familiale.</p>
+        </div>
+        <div>
+          <h2>Le cabinet</h2>
+          <address>106, avenue Mozart<br>75016 Paris</address>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul class="footer-links">
+            <li><a href="tel:+33177351440">01 77 35 14 40</a></li>
+            <li><a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a></li>
+          </ul>
+          <a class="social" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun (nouvel onglet)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.770-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></span>LinkedIn</a>
+        </div>
+        <div>
+          <h2>Navigation</h2>
+          <ul class="footer-links"><li><a href="index.html">Accueil</a></li><li><a href="about.html">Le cabinet</a></li><li><a href="practice.html">Expertises</a></li><li><a href="honoraires.html">Honoraires</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Nadia Bengeloun — Avocate en droit de la famille</span>
+        <span>Premier rendez-vous gratuit</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn--ghost" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Appeler</a>
+    <a class="btn btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg>Rendez-vous</a>
+  </div>
+
   <script src="js/site.js" defer></script>
 </body>
 </html>

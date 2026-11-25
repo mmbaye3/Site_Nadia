@@ -3,114 +3,270 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Nadia Bengeloun — Avocate en droit de la famille</title>
-  <meta name="description" content="Avocate en droit de la famille : divorce, autorité parentale, filiation, adoption et protection des personnes." />
+  <title>Nadia Bengeloun — Avocate en droit de la famille à Paris</title>
+  <meta name="description" content="Nadia Bengeloun, avocate en droit de la famille à Paris 16e : divorce, autorité parentale, pension alimentaire, filiation, adoption et protection des personnes. Premier rendez-vous gratuit." />
+  <link rel="canonical" href="https://nb-avocate.fr/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nadia Bengeloun — Avocate en droit de la famille à Paris" />
+  <meta property="og:description" content="Nadia Bengeloun, avocate en droit de la famille à Paris 16e : divorce, autorité parentale, pension alimentaire, filiation, adoption et protection des personnes. Premier rendez-vous gratuit." />
+  <meta property="og:image" content="https://nb-avocate.fr/Logo/home.jpg" />
+  <meta name="theme-color" content="#f8f4ec" />
+  <link rel="preload" href="fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="Logo/Onglet.png">
+  <link rel="icon" type="image/png" href="Logo/favicon.png">
 </head>
-<body class="home-page">
-  <div class="contact-bar">
-    <div class="container"><a href="mailto:nadia.bengeloun@nb-avocate.fr"><span aria-hidden="true">✉</span>Courriel : nadia.bengeloun@nb-avocate.fr</a><a href="tel:+33177351440"><span aria-hidden="true">☎</span>Téléphone : 01 77 35 14 40</a></div>
-  </div>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="site-header">
-    <div class="container">
-      <h1 class="brand"><a href="index.html"><img src="Logo/Logo NB (1).PNG" alt="Nadia Bengeloun"></a></h1>
-      <div class="site-menu">
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
-        <nav id="primary-navigation">
-          <a href="index.html">Accueil</a>
-          <a href="about.html">À propos</a>
-          <a href="contact.html">Contact</a>
-          <a href="honoraires.html">Honoraires</a>
-        </nav>
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Nadia Bengeloun, avocate — accueil">
+        <img src="Logo/nb-mark.png" alt="" width="200" height="174">
+        <span class="brand-text"><span class="brand-name">Nadia Bengeloun</span><span class="brand-role">Avocate · Droit de la famille</span></span>
+      </a>
+      <nav id="primary-navigation" class="nav" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a><a href="about.html">Le cabinet</a><a href="practice.html">Expertises</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a>
+        <a class="btn btn--primary" href="contact.html">Prendre rendez-vous</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+33177351440" aria-label="Appeler le cabinet au 01 77 35 14 40"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>01 77 35 14 40</span></a>
+        <a class="btn btn--primary btn--sm" href="contact.html">Prendre rendez-vous</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main id="contenu">
     <section class="hero">
-      <h2>Avocate en droit de la famille</h2>
-      <p>Écouter, conseiller et rechercher des solutions adaptées à chaque situation familiale.</p>
-      <p><a class="cta" href="contact.html">Demander une consultation</a></p>
-      <p>Le premier rendez-vous est gratuit.</p>
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow"><span>Avocate en droit de la famille · Paris 16<sup>e</sup></span></span>
+          <h1>À vos côtés, à chaque étape de votre <em>vie familiale</em>.</h1>
+          <p class="lead">Écouter, conseiller et rechercher des solutions adaptées à chaque situation familiale. Nadia Bengeloun vous accompagne avec écoute et pragmatisme.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="contact.html">Prendre rendez-vous <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--ghost" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>01 77 35 14 40</a>
+          </div>
+          <ul class="hero-facts">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg>Premier rendez-vous gratuit</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Cabinet à Paris 16<sup>e</sup></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Honoraires transparents</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <span class="hero-frame" aria-hidden="true"></span>
+          <div class="hero-photo"><img src="Logo/home.jpg" alt="Bureau d’avocat avec une balance de la justice et des codes juridiques" width="1672" height="941" fetchpriority="high"></div>
+          <div class="float-card float-card--offer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg><div><strong>1<sup>er</sup> rendez-vous offert</strong><span>pour faire le point sur votre situation</span></div></div>
+          <div class="float-card float-card--mark"><img src="Logo/nb-mark.png" alt="" width="200" height="174"></div>
+        </div>
+      </div>
     </section>
 
-    <section class="cards">
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-1">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Divorce &amp; séparation</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-1" aria-hidden="true">Divorce par consentement mutuel ou divorce judiciaire, séparation des époux et règlement des conséquences personnelles et patrimoniales.</span>
-          </span>
-        </button>
-      </article>
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-2">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Autorité parentale &amp; Résidence des enfants</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-2" aria-hidden="true">Accompagnement dans les questions relatives à l’exercice de l’autorité parentale, à la résidence des enfants et au droit de visite et d’hébergement.</span>
-          </span>
-        </button>
-      </article>
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-3">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Pension alimentaire &amp; contribution à l’entretien des enfants</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-3" aria-hidden="true">Détermination, fixation ou révision de la contribution à l’entretien et à l’éducation des enfants.</span>
-          </span>
-        </button>
-      </article>
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-4">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Filiation</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-4" aria-hidden="true">Accompagnement dans les procédures relatives à l’établissement ou à la contestation de la filiation.</span>
-          </span>
-        </button>
-      </article>
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-5">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Protection des personnes</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-5" aria-hidden="true">Accompagnement dans les situations de violences intrafamiliales et dans les procédures visant à assurer la protection des personnes concernées.</span>
-          </span>
-        </button>
-      </article>
-      <article class="skill-card">
-        <button class="skill-card-toggle" type="button" aria-expanded="false" aria-controls="competence-description-6">
-          <span class="skill-card-inner">
-            <span class="skill-card-face skill-card-front" role="heading" aria-level="3">Adoption</span>
-            <span class="skill-card-face skill-card-back" id="competence-description-6" aria-hidden="true">Conseil et accompagnement dans les démarches et procédures relatives à l’adoption.</span>
-          </span>
-        </button>
-      </article>
+    <section class="trust" aria-label="Le cabinet en bref">
+      <div class="wrap reveal-group">
+        <div class="trust-item reveal"><strong>Gratuit</strong><span>Premier rendez-vous</span></div>
+        <div class="trust-item reveal"><strong>6 domaines</strong><span>du droit de la famille</span></div>
+        <div class="trust-item reveal"><strong>150&nbsp;€&nbsp;HT</strong><span>Taux horaire ou forfait</span></div>
+        <div class="trust-item reveal"><strong>Paris 16<sup>e</sup></strong><span>106, avenue Mozart</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="expertises">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Domaines d’intervention</span>
+          <h2>Un accompagnement sur l’ensemble du droit de la famille</h2>
+          <p class="lead">Divorce, enfants, filiation, protection : chaque situation appelle une réponse juridique précise et une écoute attentive.</p>
+        </div>
+        <div class="expertise-grid reveal-group">
+          <a class="expertise-card reveal" href="practice.html#divorce">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="13.5" r="5.5"/><circle cx="15.5" cy="10.5" r="5.5"/></svg></span>
+            <h3>Divorce &amp; séparation</h3>
+            <p>Divorce par consentement mutuel ou divorce judiciaire, séparation des époux et règlement des conséquences personnelles et patrimoniales.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="expertise-card reveal" href="practice.html#autorite-parentale">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 20v-1a6 6 0 0 1 12 0v1"/><circle cx="17.5" cy="10" r="2.2"/><path d="M15.8 20v-.6a4 4 0 0 1 6.2-3.3"/></svg></span>
+            <h3>Autorité parentale &amp; résidence des enfants</h3>
+            <p>Accompagnement dans les questions relatives à l’exercice de l’autorité parentale, à la résidence des enfants et au droit de visite et d’hébergement.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="expertise-card reveal" href="practice.html#pension-alimentaire">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5A4.5 4.5 0 0 0 8 12a4.5 4.5 0 0 0 7.5 3.5M6.5 10.5h6M6.5 13.5h6"/></svg></span>
+            <h3>Pension alimentaire &amp; contribution à l’entretien des enfants</h3>
+            <p>Détermination, fixation ou révision de la contribution à l’entretien et à l’éducation des enfants.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="expertise-card reveal" href="practice.html#filiation">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/><path d="M12 7.5V12M12 12H5.5v4M12 12h6.5v4"/></svg></span>
+            <h3>Filiation</h3>
+            <p>Accompagnement dans les procédures relatives à l’établissement ou à la contestation de la filiation.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="expertise-card reveal" href="practice.html#protection">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.7 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.8 7.5-9.5V6L12 3z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Protection des personnes</h3>
+            <p>Accompagnement dans les situations de violences intrafamiliales et dans les procédures visant à assurer la protection des personnes concernées.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="expertise-card reveal" href="practice.html#adoption">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M12 17.2s-3-1.8-3-3.8a1.6 1.6 0 0 1 3-.6 1.6 1.6 0 0 1 3 .6c0 2-3 3.8-3 3.8z"/></svg></span>
+            <h3>Adoption</h3>
+            <p>Conseil et accompagnement dans les démarches et procédures relatives à l’adoption.</p>
+            <span class="link-arrow">En savoir plus <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Votre accompagnement</span>
+          <h2>Une méthode claire, du premier échange à la solution</h2>
+        </div>
+        <ol class="steps reveal-group">
+          <li class="step reveal"><h3>Premier échange</h3><p>Un rendez-vous gratuit pour échanger sur votre situation, en toute confidentialité.</p></li>
+          <li class="step reveal"><h3>Analyse</h3><p>Identification des principales problématiques juridiques et des options qui s’offrent à vous.</p></li>
+          <li class="step reveal"><h3>Stratégie</h3><p>Définition des modalités d’accompagnement et d’une convention d’honoraires claire.</p></li>
+          <li class="step reveal"><h3>Accompagnement</h3><p>Une information claire et un suivi attentif à chaque étape de votre dossier.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="wrap about-split">
+        <div class="reveal">
+          <blockquote class="quote">Écouter, conseiller et rechercher des solutions adaptées à chaque situation familiale.</blockquote>
+          <div class="quote-sign"><img src="Logo/nb-mark-light.png" alt="" width="200" height="174" loading="lazy"><div><strong>Nadia Bengeloun</strong><span>Avocate en droit de la famille</span></div></div>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Le cabinet</span>
+          <h2>Une approche humaine et pragmatique</h2>
+          <p class="lead">Nadia Bengeloun accompagne les familles avec écoute et pragmatisme afin de rechercher des solutions adaptées à chaque situation.</p>
+          <ul class="values">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><div><strong>Écoute</strong><span>Prendre le temps de comprendre votre histoire et vos priorités.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2z"/></svg><div><strong>Pragmatisme</strong><span>Privilégier, lorsque cela est possible, la résolution efficace des différends.</span></div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><div><strong>Clarté</strong><span>Une communication claire et une information complète à chaque étape.</span></div></li>
+          </ul>
+          <a class="btn btn--light" href="about.html">Découvrir le cabinet <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow">Honoraires</span>
+          <h2>Des honoraires clairs, définis ensemble</h2>
+          <p class="lead">La transparence est au cœur de la relation entre l’avocat et son client.</p>
+        </div>
+        <div class="pricing reveal-group">
+          <article class="price-card price-card--featured reveal">
+            <span class="price-tag">Au temps passé</span>
+            <h3>Honoraires au temps passé</h3>
+            <p class="price"><b>150&nbsp;€</b><span>HT / heure</span></p>
+            <p>Les diligences sont facturées au temps passé, sur la base d’un taux horaire de 150&nbsp;€&nbsp;HT.</p>
+            <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Convention d’honoraires écrite</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Modalités définies en toute transparence</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Premier rendez-vous gratuit</li></ul>
+          </article>
+          <article class="price-card reveal">
+            <span class="price-tag">Forfait</span>
+            <h3>Honoraires forfaitaires</h3>
+            <p class="price"><b>Sur mesure</b></p>
+            <p>Un honoraire forfaitaire peut également être proposé en fonction de la nature du dossier.</p>
+            <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Montant adapté à la nature du dossier</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Convention d’honoraires écrite</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Premier rendez-vous gratuit</li></ul>
+          </article>
+        </div>
+        <p class="center-link reveal"><a class="link-arrow" href="honoraires.html">Tout savoir sur les honoraires <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap faq-layout">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Vos questions, nos réponses</h2>
+          <p class="lead">Vous ne trouvez pas votre réponse ? Le plus simple est d’en parler directement.</p>
+          <a class="link-arrow" href="contact.html">Poser une question <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="faq reveal">
+          <details open>
+            <summary>Le premier rendez-vous est-il payant ?</summary>
+            <div class="answer"><p>Non, le premier rendez-vous est gratuit. Il permet d’échanger sur votre situation, d’identifier les principales problématiques juridiques et de déterminer les modalités d’accompagnement.</p></div>
+          </details>
+          <details>
+            <summary>Comment sont fixés les honoraires ?</summary>
+            <div class="answer"><p>Les honoraires sont déterminés en fonction de la nature du dossier, de sa complexité et des diligences nécessaires. Ils sont facturés au temps passé (150&nbsp;€&nbsp;HT de l’heure) ou au forfait, et font l’objet d’une convention d’honoraires.</p></div>
+          </details>
+          <details>
+            <summary>Quels frais peuvent s’ajouter aux honoraires ?</summary>
+            <div class="answer"><p>Les frais annexes (huissiers, postulation, frais de débours et dépens) restent à la charge du client.</p></div>
+          </details>
+          <details>
+            <summary>Comment prendre rendez-vous ?</summary>
+            <div class="answer"><p>Vous pouvez remplir le <a href="contact.html">formulaire de contact</a>, appeler le cabinet au <a href="tel:+33177351440">01 77 35 14 40</a> ou écrire à <a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a>.</p></div>
+          </details>
+          <details>
+            <summary>Où se situe le cabinet ?</summary>
+            <div class="answer"><p>Le cabinet est situé au 106, avenue Mozart, 75016 Paris.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <span class="eyebrow">Premier rendez-vous gratuit</span>
+          <h2>Parlons de votre situation</h2>
+          <p>Chaque histoire familiale est unique. Prenez le temps d’en parler : le premier rendez-vous permet de faire le point, sans engagement.</p>
+          <div class="btn-row">
+            <a class="btn btn--light" href="contact.html">Prendre rendez-vous <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--outline-light" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>01 77 35 14 40</a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-layout">
-        <div class="footer-main">
-          <div class="footer-location">
-            <strong>Adresse du cabinet :</strong>
-            <address>106, avenue Mozart, 75016 Paris</address>
-            <iframe class="footer-map" src="https://maps.google.com/maps?q=106%20avenue%20Mozart%2C%2075016%20Paris&amp;z=15&amp;output=embed" title="Carte : 106, avenue Mozart, 75016 Paris" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-          </div>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="Logo/logo-full-light.png" alt="Nadia Bengeloun" width="560" height="238" loading="lazy">
+          <p>Avocate en droit de la famille à Paris. Écoute, conseil et solutions adaptées à chaque situation familiale.</p>
         </div>
-        <section class="footer-social" aria-labelledby="footer-social-title">
-          <h2 id="footer-social-title">Réseaux sociaux</h2>
-          <a class="linkedin-link" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun">
-            <img src="Logo/linkedin-mark.svg" alt="LinkedIn">
-          </a>
-        </section>
+        <div>
+          <h2>Le cabinet</h2>
+          <address>106, avenue Mozart<br>75016 Paris</address>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul class="footer-links">
+            <li><a href="tel:+33177351440">01 77 35 14 40</a></li>
+            <li><a href="mailto:nadia.bengeloun@nb-avocate.fr">nadia.bengeloun@nb-avocate.fr</a></li>
+          </ul>
+          <a class="social" href="https://www.linkedin.com/in/nadia-bengeloun-55461019a/" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Nadia Bengeloun (nouvel onglet)"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path fill="currentColor" stroke="none" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.770-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg></span>LinkedIn</a>
+        </div>
+        <div>
+          <h2>Navigation</h2>
+          <ul class="footer-links"><li><a href="index.html">Accueil</a></li><li><a href="about.html">Le cabinet</a></li><li><a href="practice.html">Expertises</a></li><li><a href="honoraires.html">Honoraires</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
       </div>
-      <p class="footer-copyright">&copy; <span id="year"></span> Nadia Bengeloun</p>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Nadia Bengeloun — Avocate en droit de la famille</span>
+        <span>Premier rendez-vous gratuit</span>
+      </div>
     </div>
   </footer>
 
+  <div class="mobile-cta">
+    <a class="btn btn--ghost" href="tel:+33177351440"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.850.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Appeler</a>
+    <a class="btn btn--primary" href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></svg>Rendez-vous</a>
+  </div>
+
   <script src="js/site.js" defer></script>
-  <script src="js/cards.js" defer></script>
 </body>
 </html>
