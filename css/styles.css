@@ -367,6 +367,33 @@ a.contact-card:hover span:last-child{color:var(--accent)}
 .cookie-settings--inline{color:var(--brand);font-weight:600;text-decoration:underline;text-underline-offset:.18em}
 .cookie-settings--inline:hover{color:var(--accent)}
 
+/* ---------- Présentation (page Le cabinet) ---------- */
+.section--flush{padding-top:0}
+.section--flush .wrap{padding-top:clamp(3rem,6vw,4.5rem);border-top:1px solid var(--line)}
+.bio{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.bio-photo{max-width:26rem;margin:1.2rem 0 0 1.2rem}
+.bio-frame{position:relative;isolation:isolate}
+.bio-frame::before{content:"";position:absolute;inset:-1.2rem 1.2rem 1.2rem -1.2rem;border:1px solid var(--gold);z-index:-1;transition:transform .8s var(--ease)}
+.bio-frame img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;border-radius:var(--radius);background:var(--paper)}
+.bio-photo:hover .bio-frame::before{transform:translate(-.4rem,-.4rem)}
+.bio-photo figcaption{display:flex;flex-direction:column;margin-top:1rem;padding-left:1rem;border-left:2px solid var(--gold)}
+.bio-photo figcaption strong{font-family:var(--serif);font-size:1.15rem}
+.bio-photo figcaption span{font-size:.92rem;color:var(--ink-soft)}
+.bio-text{max-width:42rem}
+.bio-text h2{margin-bottom:1.2rem}
+.bio-text p{color:var(--ink-soft)}
+.bio-text .lead{color:var(--ink)}
+.bio-current{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--line);font-weight:600;color:var(--ink)!important}
+.js .bio-photo.reveal:not(.is-visible) .bio-frame::before{transform:translate(1.2rem,-1.2rem);opacity:0}
+.js .bio-photo.reveal .bio-frame::before{transition:transform 1.1s var(--ease) .3s,opacity .8s ease .3s}
+@media (max-width:900px){
+  .bio{grid-template-columns:1fr}
+  .bio-photo{max-width:20rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .bio-photo.reveal:not(.is-visible) .bio-frame::before{transform:none;opacity:1}
+}
+
 /* ==========================================================================
    Responsive
    ========================================================================== */
